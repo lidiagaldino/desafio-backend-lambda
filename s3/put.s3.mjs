@@ -6,7 +6,6 @@ export async function putS3Object(dstBucket, dstKey, content, client) {
         Bucket: dstBucket,
         Key: dstKey,
         Body: content,
-        ContentType: "application/json"
       });
     
       const putResult = await client.send(putCommand);
